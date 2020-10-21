@@ -22,21 +22,216 @@ endif::backend-html5[]
 
 == 2020-09-21
 
+* statische / dynamische Webseiten
+* VCS
+
+== 2020-10-05
+
+=== Git
+
+* In enem Git Repository werden sämtliche Dateien des Working Copy - Folders als Snapshot verwenden.
+* Diese Snapshots werden Versionen genannt.
+
+==== centralized vs distributed vcs
+
+* examples:
+** subversion,
+** ms team foundation server
+
+.centralized vcs
+[plantuml,centralvcs,png]
+----
+@startuml
+rectangle "centralized vcs" as vcs
+actor basti
+actor luki
+actor edina
+edina -up- vcs
+basti -- vcs
+luki -up-vcs
+@enduml
+----
+
+* Single-point-of-failure
+
+.distributed vcs
+[plantuml,distributedvcs,png]
+----
+@startuml
+rectangle "remote vcs" as vcs
+rectangle "local repo" as repo1
+rectangle "local repo" as repo2
+rectangle "local repo" as repo3
+
+actor basti
+actor luki
+actor edina
+edina -up- repo1
+basti -- repo3
+luki -up-repo2
+
+repo1 -up- vcs
+repo2 -up- vcs
+repo3 -- vcs
+@enduml
+----
+
+== 2020-10-12
+
+Entfall wegen Docker-Seminar
+
+== 2020-10-19
+
+=== Ignorieren von Files
+
+* In einem File `.gitignore` werden sämtliche Dateien und Ordner angegeben, die NICHT ins Repo gespeichert werden,
+dh sie sind nicht Bestandteil einer Version (Schnappschuss)
+* Werden bereits im Repo enthaltene Files in die .gitignore eingetragen, so werden diese weiterhin committed
+** Diese Files sind vorher aus dem Repo zu löschen
+
+=== Unstaging files
+
+[source,bash]
+----
+git restore --staged <files>
+git restore --staged .
+----
+
+=== Short Version for git status
+
+[source,bash]
+----
+git status -s
+----
+
+
+=== Änderungen bis zum letzten Commit zurücknehmen
+
+Falls ein geändertes File noch nicht commited wurde,
+kann man die Änderungen bis zum letzten commit zurücknehmen.
+
+[source,bash]
+----
+git restore <file>
+----
+
+oder
+
+.Sämtliche Änderungen des gesamten Snapshots werden zurückgesetzt
+[source,bash]
+----
+git restore .
+----
+
+* Neu erstellte Files bleiben bestehen
+
+* Löschen neu erstellter Files
+
+[source,bash]
+----
+git clean -f
+----
+
+IMPORTANT: Dangerous operation
+
+
+== Den Zustand eines früheren Commits herstellen
+
+.ein File wurde zB gelöscht
+[source,bash]
+----
+git rm <file>
+----
+
+.ein File wurde zB gelöscht
+[source,bash]
+----
+git restore --source=HEAD~1 <file-with-exact-path> #<.>
+----
+
+<.> HEAD~1 bedeutet, ein Commit vor dem letzten Commit (vorletzter Commit)
+
+Das neu erstellte (bzw. zurückgeholte) File ist untracked.
+
+=== Detached HEAD
+
+
+* In git gibt es mehrere Branches
+** Der Hauptbranch heißt in git `master`
+** in anderen VCS `trunk`
+
+.Auf den letzten Commit zeigen sowohl MASTER als auch HEAD
+[plantuml, align=left]
+----
+include::plantuml/commits.puml[]
+----
+
+.Anzeigen der Commit-Id's
+[source,shell]
+----
+git log --oneline
+----
+
+.output
+----
+8ade525 (HEAD, master) remove unused code
+db633a9 make the repo clean
+028fc7c add important code
+cc9fd84 remove unused code
+9f57ec0 add minutes-of-meeting-template
+3fb9399 initial commit
+----
+
+.Der HEAD wird auf den (zB) ersten Commit gesetzt
+[source,shell]
+----
+# git checkout <commit-id>
+git checkout 3fb9399
+git log --oneline  <.>
+----
+<.> Anzeigen der neuen History
+* mit git log --oneline, würde man nur alle früheren commits sehen
+* mit git log --oneline --all, würde man alle commits (auch die späteren) sehen
+
+.output
+----
+3fb9399 (HEAD) initial commit
+----
+
+
+
+.Detached HEAD
+[plantuml, align=left]
+----
+include::plantuml/commits-detached-head.puml[]
+----
+
+* Wenn der HEAD-Pointer zu einem (früheren) Commit zeigt, spricht man von einem detached HEAD,
+dh MASTER und HEAD zeigen nicht mehr auf den selben (den letzten) Commit
+* Bei einem detached HEAD, sollten keinen neuen Commits durchgeführt werden
+** diese neuen Commits wären nicht mehr erreichbar
+
+
+.würde man einen neuen Commit erstellen (wie hier abgebildet), so wäre dieser nicht mehr erreichbar, nachdem HEAD wieder auf den letzten commit gesetzt wird
+[plantuml, align=left]
+----
+include::plantuml/commits-detached-head-lost-commit.puml[]
+----
+
+[plantuml, align=left]
+----
+include::plantuml/commits-detached-head-lost-commit-2.puml[]
+----
 
 
 
 
 
 
+[source,shell]
+----
 
-
-
-
-
-
-
-
-
+----
 
 
 
