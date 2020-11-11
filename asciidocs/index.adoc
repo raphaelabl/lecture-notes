@@ -223,6 +223,95 @@ include::plantuml/commits-detached-head-lost-commit.puml[]
 include::plantuml/commits-detached-head-lost-commit-2.puml[]
 ----
 
+== 2020-11-09
+
+=== Blaming
+
+=== Tagging
+
+=== Sematische Versionisierung
+
+
+== 2020-11-11 (Ersatzstunde)
+
+* branch umbenennen
+* switch
+* dirty working copy
+
+nächstes Video: stashing
+
+[source,shell]
+----
+
+----
+
+
+
+
+
+
+
+[source,shell]
+----
+
+----
+
+
+
+
+
+
+
+[source,shell]
+----
+
+----
+
+
+
+
+
+
+
+[source,shell]
+----
+
+----
+
+
+
+
+
+
+
+[source,shell]
+----
+
+----
+
+
+
+
+
+
+
+[source,shell]
+----
+
+----
+
+
+
+
+
+
+
+[source,shell]
+----
+
+----
+
+
 
 
 
