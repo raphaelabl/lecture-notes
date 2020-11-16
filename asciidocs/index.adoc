@@ -229,7 +229,7 @@ include::plantuml/commits-detached-head-lost-commit-2.puml[]
 
 === Tagging
 
-=== Sematische Versionisierung
+=== Semantische Versionisierung
 
 
 == 2020-11-11 (Ersatzstunde)
@@ -246,8 +246,63 @@ nächstes Video: stashing
 ----
 
 
+== 2020-11-16
 
+=== Projektantrag
 
+(project proposal)
+
+Buch Kap. 2.1
+
+=== Projektziele
+
+Buch Kap. 3.1
+
+bis Seite 53 (inkl. Operationalisierung)
+
+HÜ: Erarbeiten des Begriffs "Operationalisierung" mit Beispielen.
+
+==== Vorgangsweise zur Erstellung des Projektantrags
+
+Voraussetzung:
+
+* Docker oder podman
+* Intellij installieren
+** über https://www.jetbrains.com/de-de/toolbox-app/[Jetbrains Toolbox, window="_blank"] !!!!!!!!!!!!!!!!!!
+** IntelliJ Ultimate (stable-version) installieren
+** Plugins installieren
+*** https://intellij-asciidoc-plugin.ahus1.de/[Asciidoctor, window="_blank"]
+*** https://plugins.jetbrains.com/plugin/7017-plantuml-integration[plantuml, window="_blank"]
+
+=== Erstellen einer AsciiDoctor - Doku-page (inkl gh-pages)
+
+* Checkout des Classroom-Repositories (ist derzeit noch leer)
+* Hinzufügen der https://github.com/htl-leonding-college/asciidoctor-docker-template/releases/tag/v1.1.3[Asciidoctor-Erweiterung, window="_blank"] zum Projekt
+* Erstellen eines Documents project-proposal.adoc im asciidoc-Verzeichnis
+* im github-repo im dafür vorgesehenen Bereich (About) den Url der gh-pages (index) eintragen
+* Eintragen des gh-pages Link zum project-proposal in das README.md
+----
+<<project-proposal.adoc#, open project proposal>>
+----
+* Nach Fertigstellung, einchecken ins classroom-github-repository.
+
+---
+
+* Beachte:
+** Lösche das asciidocs-demo - Verzeichnis
+** Lösche das Bild `animal-pet-cute-kitten-45201.jpg`
+** Zum abgeben ein commit/push durchführen
+*** Die gh-pages müssen erstellt sein
+*** Sämtliche Files müssen im Repo enthalten sein
+
+=== How to install Docker under Windows
+
+* install from App Store -> WSL2 -> Ubuntu
+* or use dual-boot
+
+=== Static Page Generator
+
+https://www.ionos.at/digitalguide/websites/webseiten-erstellen/was-ist-ein-static-site-generator/[Static-Site-Generatoren: Mit Minimalismus zum eigenen Webprojekt, window="_blank"]
 
 
 
