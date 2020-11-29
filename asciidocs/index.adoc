@@ -305,6 +305,85 @@ Voraussetzung:
 https://www.ionos.at/digitalguide/websites/webseiten-erstellen/was-ist-ein-static-site-generator/[Static-Site-Generatoren: Mit Minimalismus zum eigenen Webprojekt, window="_blank"]
 
 
+== 2020-11-23
+
+=== Kontrollieren der Projektaufträge
+
+=== Festlegen der Projektgruppen
+
+.Projekte - Themenvergabe
+//[%collapsible%open]
+[%collapsible]
+====
+|===
+|Team |Members |Notes
+
+|Team 1: End-to-End-Event-Management
+a|
+* 6 Bogdan, Sebastijan
+* 9 Grbic, Antonio
+* 7 Bounab, Sofiane
+* 1 Abazovic, Edina
+|
+
+|Team 2: Work Monitor
+a|
+* 26 Tran, Michael
+* 13 Hirsch, Nico
+* 28 Zhao, Denis
+* 25 Tea, Vivian
+|
+
+|Team 3: Hotel Room Booking System
+a|
+* 2 Ablinger, Raphael
+* 24 Sugic, Oliver
+* 15 Kerschbaum, Philipp
+* 18 Neudorfer, Niklas
+|
+
+|Team 4: RankCar
+a|
+* 19 Pavelescu, Darius-Cristian
+* 3 Aichinger, Niklas
+* 4 Bajim, Nadia
+* 10 Handel, Christoph
+* 27 Tunc Johannes
+a|
+* Entitäten:
+** Car
+** Category
+** Rating
+** Comments
+
+|Team 5: Restaurant Management System
+a|
+* 11 Hartl, Anna
+* 16 König, Julia
+* 12 Hautzmayer, Sheila
+* 17 Melcher, Tamara
+|
+
+|Team 6: Watering Reminder
+a|
+* 5 Baumgartner, Lukas
+* 20 Pelzeder,
+* 23 Soltysiak, Dominik
+|
+
+|Team 7: finoview
+a|
+* 14 Keintzel, Florian
+* 22 Remplbauer, Markus
+* 21 Rathberger, Jakob
+|
+|===
+
+====
+
+=== Projektrepositories erstellen
+
+https://classroom.github.com/g/AqJgD5oa
 
 [source,shell]
 ----
