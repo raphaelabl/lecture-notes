@@ -256,7 +256,7 @@ Buch Kap. 2.1
 
 === Projektziele
 
-Buch Kap. 3.1
+Buch Kap. 2.3
 
 bis Seite 53 (inkl. Operationalisierung)
 
@@ -322,13 +322,13 @@ https://www.ionos.at/digitalguide/websites/webseiten-erstellen/was-ist-ein-stati
 a|
 * 6 Bogdan, Sebastijan
 * 9 Grbic, Antonio
-* 7 Bounab, Sofiane
+* *7 Bounab, Sofiane* PL
 * 1 Abazovic, Edina
 |
 
 |Team 2: Work Monitor
 a|
-* 26 Tran, Michael
+* *26 Tran, Michael* PL
 * 13 Hirsch, Nico
 * 28 Zhao, Denis
 * 25 Tea, Vivian
@@ -336,7 +336,7 @@ a|
 
 |Team 3: Hotel Room Booking System
 a|
-* 2 Ablinger, Raphael
+* *2 Ablinger, Raphael* PL
 * 24 Sugic, Oliver
 * 15 Kerschbaum, Philipp
 * 18 Neudorfer, Niklas
@@ -344,7 +344,7 @@ a|
 
 |Team 4: RankCar
 a|
-* 19 Pavelescu, Darius-Cristian
+* *19 Pavelescu, Darius-Cristian* PL
 * 3 Aichinger, Niklas
 * 4 Bajim, Nadia
 * 10 Handel, Christoph
@@ -359,7 +359,7 @@ a|
 |Team 5: Restaurant Management System
 a|
 * 11 Hartl, Anna
-* 16 König, Julia
+* *16 König, Julia* PL
 * 12 Hautzmayer, Sheila
 * 17 Melcher, Tamara
 |
@@ -367,23 +367,274 @@ a|
 |Team 6: Watering Reminder
 a|
 * 5 Baumgartner, Lukas
-* 20 Pelzeder,
+* *20 Pelzeder, Joachim* PL
 * 23 Soltysiak, Dominik
 |
 
 |Team 7: finoview
 a|
-* 14 Keintzel, Florian
+* *14 Keintzel, Florian* PL
 * 22 Remplbauer, Markus
 * 21 Rathberger, Jakob
 |
 |===
+
+PL ... Projektleiter
 
 ====
 
 === Projektrepositories erstellen
 
 https://classroom.github.com/g/AqJgD5oa
+
+
+== 2020-11-30
+
+=== Wdhlg. Begriff Operationalisierung und Indikatoren
+
+* quantifizierbar -> etwas zählbar, messbar oder wiegbar machen
+* operationalisieren -> einen abstrakten Begriff mit Indikatoren ausdrücken.
+* Indikatoren -> Zahlen die auf etwas hinweisen (lat. indico ... anzeigen) Werden gemessen, gezählt oder gewogen.
+* Kennzahlen -> werden aus anderen Kennzahlen oder Indikatoren berechnet.
+
+=== Stakeholder
+
+* Arbeiten nicht direkt am Projekt mit, sind aber von den Auswirkungen betroffen -> Betroffene
+
+=== Zielarten
+
+image:zielarten.png[]
+
+* Qualität -> Ist das, was der Kunde wünscht (keine "offizielle" Definition).
+
+=== Projektauftrag
+
+Kap. 2.5
+
+* Meilenstein -> Termin mit einer sachlichen Inhaltskomponente, welche überprüfbar ist.
+
+IMPORTANT: Erstellen eines Projektauftrags pro Gruppe und einchecken Project-Repository.
+
+[plantuml,tree,png]
+----
+@startsalt
+{
+{T
++  Project-root
+++ asciidocs
++++ Project Proposal
++++ System Specification
+++ src
++ pom.xml
++ ...
+}
+}
+@endsalt
+----
+
+* Es besteht die Wahl zwischen maven und gradle
+
+=== Build-Tools
+
+==== Aufgaben eines Build-Tools
+
+* Durchführen des Build-Prozesses
+** Kompilieren der Sourcen
+** Linken der Libraries
+** Durchführen der Tests
+** ...
+
+==== Ant
+
+* Another Neat Tool
+* sehr flexibel, keine Struktur
+* in einem xml-File (zB. build.xml bei Netbeans) können Build-Steps selbst definiert werden
+
+* Cons
+** in jeder IDE eine eigene Struktur
+** Projekte konnten zwischen IDEs nicht ohne Anpassungen ausgetauscht werden
+** Die Libraries müssen manuell heruntergeladen werden -> lib-Folder
+** Es wurde Ivy benötigt, um die Libraries automatisch herunterzuladen
+
+==== Maven
+
+* Pros (Vorteile)
+** fixe Struktur mit life-cycle
+** sehr großes Ökosystem
+** Automatischer Download der benötigten Libraries zentral am Arbeits-PC (.m2- Verzeichnis im HOME)
+*** in der korrekten Version
+*** es gibt Repositories der Libraries zB https://mvnrepository.com
+** in Foren und Beispielen im Netz meist maven
+** großes Ökosystem an Libraries und Plugins
+
+* Cons (Nachteile)
+** zu fixer life-cycle, unflexibel
+** xml als Notation der pom.xml
+
+==== Gradle
+
+* Pros
+** sehr flexibel
+** kein xml, sondern eine DSL (Domain-Specific-Language) für die Konfiguration
+*** Groovy (wie Ruby, aber auf der JVM)
+*** (Kotlin)
+** verwendet intern maven und dessen großes Ökosystem
+
+=== UML-Klassendiagramm
+
+[plantuml,cld01,png]
+----
+@startuml
+class Form {
+  - urspung
+  + verschieben()
+  # foo()
+}
+@enduml
+----
+
+* Konvention -> Vereinbarung
+* Signatur einer Methode: Scope + Rückgabewert + Methodenname + Parameterleiste
+* Objekt (Object) = Instanz einer Klasse; mit Identität und Zustand
+
+* Beispiel: PKW
+** Anwendungsfall 1: Transport von Personen
+** Anwendungsfall 2: Transport von Gütern
+** Anwendungsfall 3: Cruisen auf der Landstraße (Statussymbol)
+
+* Eigenschaften von Objekten
+** Objektidentität
+
+image:objektidentitaet.png[]
+
+** Datenkapselung
+image:datenkapselung.png[]
+
+** Polymorphismus (Vielgestaltigkeit)
+
+[plantuml,polym,png]
+----
+@startuml
+class Animal {
+  abstract say()
+}
+class Duck {
+  say()
+}
+class Cat {
+  say()
+}
+Animal <|-- Duck
+Animal <|-- Cat
+@enduml
+----
+
+[source,java]
+----
+Duck donald = new Duck();
+donald.say(); // quack
+Cat mimi = new Cat();
+mimi.say(); // miau
+
+List<Animal> animals = new LinkedList<>();
+animals.add(donald);
+animals.add(mimi);
+animal.get(0).say(); // quack
+annimal.get(1).say(); // miau
+----
+
+** Vererbung
+
+==== Beziehungen zwischen Objekte
+
+===== Generalisierung (Vererbung)
+
+===== Assoziation
+
+[plantuml,assoziation01,png]
+----
+@startuml
+Person "Abeitnehmer\n1..*" --- "Arbeitgeber\n1" Firma: arbeitet für >
+@enduml
+----
+
+.unidirektional
+[plantuml,assoziation02,png]
+----
+@startuml
+class Person{
+  firma: Firma
+}
+Person "1..*" -r-> "1" Firma: arbeitet für >
+@enduml
+----
+
+.unidirektional
+[plantuml,assoziation03,png]
+----
+@startuml
+class Person{
+}
+class Firma {
+  belegschaft: List<Person>
+}
+Person "1..*" <-l- "1" Firma: arbeitet für >
+@enduml
+----
+
+.bidirektional
+[plantuml,assoziation03,png]
+----
+@startuml
+class Person{
+  - firma: Firma
+}
+class Firma {
+  - belegschaft: List<Person>
+}
+Person "1..*" <-l- "1" Firma: hat Angestellte <
+Person "1..*" -l-> "1" Firma: arbeitet für >
+@enduml
+----
+
+===== Aggregation
+
+* "Ganze-Teile"-Beziehung, die zerstörungsfrei zerlegt werden kann
+* Bsp
+** Auto + Autoreifen
+
+
+===== Komposition
+
+* "Ganze-Teile"-Beziehung, die *nicht* zerstörungsfrei zerlegt werden kann
+* Bsp
+** Haus + Stockwerk
+** Buch + Kapitel
+
+
+* Zustand eine Objekts -> Werte der Attribute / Klassenfelder
+
+IMPORTANT: HÜ - Klassendiagramm für Bsp Kinokette (gezeichnet in plantuml)
+
+Die Firma STAR-MOVIES betreibt eine Kinokette mit mehreren Kinos (Name,
+Adresse, ... ).
+
+In jedem Kino können mehrere Säle untergebracht sein, in denen die Filme gezeigt werden. Der Sitzplan jedes Saales soll festgehalten werden; für jeden Sitz muss eine Reihe und ein Platz angegeben sein. Eine Loge soll wie eine Reihe verwaltet werden.
+
+Die Erstellung eines Spielplanes muss möglich sein. Es können pro Saal natürlich mehrere Filme an einem Tag gezeigt werden. Um die freien Sitze einer Vorstellung feststellen zu können, ist jeder Kartenkauf zu vermerken. Auf jeder Eintrittskarte soll aufscheinen: Kino, Saal, Filmtitel, Datum, Beginnzeit, laufende Nummer innerhalb der Vorstellung, Reihe, Platz, Preis.
+
+Für die Preisgestaltung ist vorzusehen: Jede Reihe eines Saales hat einen Standardpreis, für bestimmte Vorstellungen können die Reihenpreise aber auch individuell festgelegt werden. Für Auskunftszwecke sollen die Schauspieler mit ihren persönlichen Daten (Nachname, Vorname, Nationalität, Geburtsdatum, Todesdatum, Bemerkung, ... ) erfasst werden und die Aussage möglich sein, welche Schauspieler in welchen Filmen mitgespielt haben.
+
+Die analogen Aussagen sollen auch für Regisseure möglich sein, wobei angenommen werden kann, dass es für einen Film nur einen Regisseur gibt. Es ist allerdings möglich, dass bei einem Film der Regisseur auch mitspielt.
+
+Die sonstigen Daten eines Filmes umfassen: Titel, Art (Krimi, Western, Jugendfilm, ... ), Herstellungsjahr, Land, Sprache, Dauer, Verleih, etc.
+
+* Abgabe: https://classroom.github.com/a/e3hqVOIS
+* Inhalt:
+** ein File mit Namen nachname-cld.adoc (oder .puml)
+** ein File mit Namen nachname-cld.png
+* Termin: 7. Dezember 2020
+
 
 [source,shell]
 ----
