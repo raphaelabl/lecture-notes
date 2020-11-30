@@ -583,7 +583,7 @@ Person "1..*" <-l- "1" Firma: arbeitet für >
 ----
 
 .bidirektional
-[plantuml,assoziation03,png]
+[plantuml,assoziation04,png]
 ----
 @startuml
 class Person{
