@@ -614,6 +614,58 @@ Person "1..*" -l-> "1" Firma: arbeitet für >
 
 * Zustand eine Objekts -> Werte der Attribute / Klassenfelder
 
+
+==== Zwei Arten der Darstellung assoziativer Tabellen
+
+* Assoziative Tabellen werden zur Auflösung von \*:*-Beziehungen gebraucht
+
+===== Ausgangssituation
+
+[plantuml]
+----
+@startuml
+left to right direction
+Produkt "1..*" -- "*" Rechnung: enthält <
+@enduml
+----
+
+===== Notation 1
+
+[plantuml]
+----
+@startuml
+left to right direction
+class Rechnungsposition {
+  rechnung: Rechnung
+  produkt Produkt
+  menge: int
+  preisProStk: BigDecimal
+}
+Produkt "1" <-- "*" Rechnungsposition
+Rechnungsposition "*" --> "1" Rechnung
+@enduml
+----
+
+
+===== Notation 2
+
+[plantuml]
+----
+@startuml
+left to right direction
+class Rechnungsposition {
+  rechnung: Rechnung
+  produkt Produkt
+  menge: int
+  preisProStk: BigDecimal
+}
+Produkt "1..*" -- "*" Rechnung: enthält <
+(Produkt,Rechnung) .. Rechnungsposition
+@enduml
+----
+
+
+
 IMPORTANT: HÜ - Klassendiagramm für Bsp Kinokette (gezeichnet in plantuml)
 
 Die Firma STAR-MOVIES betreibt eine Kinokette mit mehreren Kinos (Name,
