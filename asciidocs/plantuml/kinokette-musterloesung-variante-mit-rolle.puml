@@ -50,13 +50,14 @@ class Person {
 
 
 class Rolle {
-  -film: Film
-  -Person: Person
+  -bezeichnung: String
+  -abbrev: String
 }
 
 class Engagement {
   -film: Film
   -person: Person
+  -rolle: Rolle
 }
 
 note "Rolle kann auch \nRegisseur sein und Cutter, ..." as N1

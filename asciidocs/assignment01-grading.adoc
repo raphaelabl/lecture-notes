@@ -2239,7 +2239,6 @@ class Seat {
   -row: Row
 }
 class Ticket {
-  -row: Row
   -seat: Seat
 }
 

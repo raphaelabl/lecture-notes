@@ -619,6 +619,9 @@ Person "1..*" -l-> "1" Firma: arbeitet für >
 
 * Assoziative Tabellen werden zur Auflösung von \*:*-Beziehungen gebraucht
 
+
+
+
 ===== Ausgangssituation
 
 [plantuml]
@@ -664,6 +667,25 @@ Produkt "1..*" -- "*" Rechnung: enthält <
 @enduml
 ----
 
+===== Notation 1 & 2 als ERD
+
+[plantuml]
+----
+@startuml
+left to right direction
+Entity Produkt
+Entity Rechnung
+Entity Rechnungsposition {
+  rechnung: Rechnung
+  produkt Produkt
+  menge: int
+  preisProStk: BigDecimal
+}
+Produkt  ||--|{ Rechnungsposition
+Rechnungsposition }|--|| Rechnung
+@enduml
+----
+
 
 
 IMPORTANT: HÜ - Klassendiagramm für Bsp Kinokette (gezeichnet in plantuml)
@@ -686,6 +708,10 @@ Die sonstigen Daten eines Filmes umfassen: Titel, Art (Krimi, Western, Jugendfil
 ** ein File mit Namen nachname-cld.adoc (oder .puml)
 ** ein File mit Namen nachname-cld.png
 * Termin: 7. Dezember 2020
+
+
+== 2020-12-14
+
 
 
 [source,shell]
