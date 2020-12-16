@@ -712,6 +712,26 @@ Die sonstigen Daten eines Filmes umfassen: Titel, Art (Krimi, Western, Jugendfil
 
 == 2020-12-14
 
+== 2020-12-16
+
+* (Ersatztermin für Montag 2020-12-14 -> Physik-Test)
+
+=== Übung "Bibliothek"
+
+Eine Bibliothek möchte ein Online-System einführen, das die Verwaltung der Buchbestände, das Auffinden von Büchern nach Fachrichtung und Stichworten ermöglicht.
+
+Die Daten über Bücher entstehen beim Einkauf, wo Autor, Titel, Verlag, Kurzerklärung, ISBN- Nummer usw. erfasst werden.
+Ein Buch kann in mehreren Exemplaren angekauft werden.
+
+Alle weiteren Daten entstehen beim Entlehnen und der (hoffentlichen) Rückgeben der Bücher.
+Daher sollte auch festgestellt werden können, wer, wie lange und bis wann welches Buch ent- lehnt hat.
+Bei Verzug wird dem Betreffenden eine Mahnung per Post geschickt.
+Die maximale Ausleihdauer und die Mahnspesen sind je nach Buch unterschiedlich.
+
+* Aufgabe: Erstellen sie ein Klassendiagramm in plantUML -> <nachname>.puml
+* Exportieren Sie das CLD als png -> <nachname>.png
+* Geben Sie die beiden Files am Classroom-Server ab (github: https://classroom.github.com/a/0UvNu-JI)
+
 
 
 [source,shell]
