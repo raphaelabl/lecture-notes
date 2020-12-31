@@ -1,0 +1,31 @@
+= Assignment Wasserwerk Kugelmugel
+Thomas Stütz
+1.0.0, 2020-12-30: CLD (Class Diagram)
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:experimental:
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+
+== Ausgangssituation - Wasserwerk der Stadt Kugelmugel
+
+Die Stadtverwaltung von Kugelmugel hat sich entschlossen, das Abrechnungssystem für den Wasserverbrauch der Abnehmer grundlegend zu reorganisieren.
+Es soll zu diesem Zweck ein neues EDV-System entwickelt werden.
+Bisher wurden die Zählerstände der einzelnen Abnehmer von den Wasserkassierern der Stadt vierteljährlich abgelesen und gleichzeitig wurden bei diesen
+Besuchen die Abrechnungen des vorhergehenden Quartals vorgelegt und die entsprechenden Rechnungsbeiträge eingehoben.
+
+Mit Hilfe des EDV-Systems und der entsprechenden Datenbankapplikation soll nun folgende Vorgangsweise realisiert werden:
+
+* Einmal im Jahr wird der Zähler (eindeutige Gerätenummer) von einem Kontrollorgan überprüft, der Wasserstand abgelesen und der Verrechnungsstelle übermittelt.
+* Die Zähler eines Abnehmers werden dann abgerechnet und die Wasserabnehmer erhalten vierteljährlich einen Zahlschein, mittels dem sie eine Teilzahlung für den Wasserverbrauch leisten. Dieser Teilbetrag wird vom Wasserwerk vorgeschrieben und errechnet sich aufgrund des letzten Jahresverbrauchs. Eine Kontrolle der Zahlungen soll über EDV möglich sein.
+* Bei den Abrechnungen ist zu berücksichtigen, dass die Abnehmer auch mehrere Zähler installiert haben können.
+
+== Aufgabenstellung
+
+* Erstellen Sie ein Klassendiagramm, um obigen Sachverhalt abzuilden.
+* Verwenden Sie hierzu plantUML.
+* Das Datenmodell soll der 3. Normalform entsprechen (vgl. ERD).
+* Erstellen Sie ein .puml-File

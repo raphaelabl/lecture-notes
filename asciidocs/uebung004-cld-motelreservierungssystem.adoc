@@ -1,0 +1,26 @@
+= Assignment Motelreservierungssystem
+Thomas Stütz
+1.0.0, 2020-12-30: CLD (Class Diagram)
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:experimental:
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+
+== Ausgangssituation - Motelreservierungssystem
+
+Modellieren Sie ein Reservierungssystem für Motels, welches die Reservierung von Zimmern, sowie die Verwaltung von Aufenthalten erlaubt.
+Motels werden durch eine Nummer eindeutig identifiziert, befinden sich in einer bestimmten Stadt und stellen Zimmer verschiedener Kategorien zur Verfügung.
+Kunden führen Reservierungen für einen geplanten Aufenthalt durch.
+Der tatsächliche Aufenthalt kann von den Plandaten bezüglich Terminen und Zimmer abweichen.
+Zum Aufenthalt sind weiters die getätigten Ausgaben mit Bezeichnung, Datum und Uhrzeit zu speichern.
+
+
+== Aufgabenstellung
+
+* Erstellen Sie ein Klassendiagramm, um obigen Sachverhalt abzuilden.
+* Verwenden Sie hierzu plantUML.
+* Das Datenmodell soll der 3. Normalform entsprechen (vgl. ERD).

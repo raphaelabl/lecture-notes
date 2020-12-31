@@ -724,13 +724,119 @@ Die Daten über Bücher entstehen beim Einkauf, wo Autor, Titel, Verlag, Kurzerk
 Ein Buch kann in mehreren Exemplaren angekauft werden.
 
 Alle weiteren Daten entstehen beim Entlehnen und der (hoffentlichen) Rückgeben der Bücher.
-Daher sollte auch festgestellt werden können, wer, wie lange und bis wann welches Buch ent- lehnt hat.
+Daher sollte auch festgestellt werden können, wer, wie lange und bis wann welches Buch entlehnt hat.
 Bei Verzug wird dem Betreffenden eine Mahnung per Post geschickt.
 Die maximale Ausleihdauer und die Mahnspesen sind je nach Buch unterschiedlich.
 
 * Aufgabe: Erstellen sie ein Klassendiagramm in plantUML -> <nachname>.puml
 * Exportieren Sie das CLD als png -> <nachname>.png
 * Geben Sie die beiden Files am Classroom-Server ab (github: https://classroom.github.com/a/0UvNu-JI)
+
+.Musterlösung
+plantuml::plantuml/cld-bibliothek.puml[]
+
+
+== 2020-12-21
+
+=== Class Diagram erarbeitet
+
+=== TODO bis nach Weihnachten
+
+==== ERD erstellen
+
+* Das Klassendiagramm als ERD in Crow-Foot-Notation erstellen
+
+==== Pflichtenheft
+
+* Im Buch Kapt. Pflichtenheft lesen
+
+
+==== Datenmodell in SQL implementieren
+
+==== Docker auf Entwicklermaschinen installieren
+
+=== Technologie im Projekt
+* JavaFX
+* JDBC
+* postgresql (gedockert)
+
+
+=== Demnächst zu tun
+
+* Crashkurs:
+** JDBC
+** assertJ-core
+** assertJ-db
+** Ausführen von Skripten
+
+=== Übungen
+
+* Termin 7. Jänner 2021
+* Abgabe: https://classroom.github.com/a/g3a1-sSK
+
+==== Sparverein
+
+===== Ausgangssituation
+
+* Der Kassier eines Sparvereins möchte die Einzahlungen der Sparvereinsmitglieder EDV-mäßig verwalten.
+* Eine Einzahlung findet 1x pro Monat an einem bestimmten Tag statt.
+* Für jede Einzahlung ist das Sparvereinsmitglied, der Betrag und das Einzahlungsdatum zu vermerken.
+* Vergisst jemand auf eine Einzahlung, so muss er bei der nächsten Einzahlung Strafe zahlen. Da die Strafen für Ausflüge, .... verwendet werden, müssen die Strafbeträge extra gespeichert werden.
+* Der Kassier sollte am Jahresende die Möglichkeit haben, den Gesamtbetrag zu jedem Mitglied leicht berechnen zu können.
+
+===== Aufgabenstellung
+
+* Erstellen Sie ein Klassendiagramm, um obigen Sachverhalt abzuilden.
+* Verwenden Sie hierzu plantUML.
+* Das Datenmodell soll der 3. Normalform entsprechen (vgl. ERD).
+* Erstellen Sie ein .puml-File sowie ein pdf-File.
+
+
+
+==== Motelreservierungssystem
+
+===== Ausgangssituation
+
+Modellieren Sie ein Reservierungssystem für Motels, welches die Reservierung von Zimmern, sowie die Verwaltung von Aufenthalten erlaubt.
+Motels werden durch eine Nummer eindeutig identifiziert, befinden sich in einer bestimmten Stadt und stellen Zimmer verschiedener Kategorien zur Verfügung.
+Kunden führen Reservierungen für einen geplanten Aufenthalt durch.
+Der tatsächliche Aufenthalt kann von den Plandaten bezüglich Terminen und Zimmer abweichen.
+Zum Aufenthalt sind weiters die getätigten Ausgaben mit Bezeichnung, Datum und Uhrzeit zu speichern.
+
+
+===== Aufgabenstellung
+
+* Erstellen Sie ein Klassendiagramm, um obigen Sachverhalt abzuilden.
+* Verwenden Sie hierzu plantUML.
+* Das Datenmodell soll der 3. Normalform entsprechen (vgl. ERD).
+* Erstellen Sie ein .puml-File sowie ein pdf-File.
+
+
+==== Wasserwerk Kugelmugel
+
+===== Ausgangssituation - Wasserwerk der Stadt Kugelmugel
+
+Die Stadtverwaltung von Kugelmugel hat sich entschlossen, das Abrechnungssystem für den Wasserverbrauch der Abnehmer grundlegend zu reorganisieren.
+Es soll zu diesem Zweck ein neues EDV-System entwickelt werden.
+Bisher wurden die Zählerstände der einzelnen Abnehmer von den Wasserkassierern der Stadt vierteljährlich abgelesen und gleichzeitig wurden bei diesen
+Besuchen die Abrechnungen des vorhergehenden Quartals vorgelegt und die entsprechenden Rechnungsbeiträge eingehoben.
+
+Mit Hilfe des EDV-Systems und der entsprechenden Datenbankapplikation soll nun folgende Vorgangsweise realisiert werden:
+
+* Einmal im Jahr wird der Zähler (eindeutige Gerätenummer) von einem Kontrollorgan überprüft, der Wasserstand abgelesen und der Verrechnungsstelle übermittelt.
+* Die Zähler eines Abnehmers werden dann abgerechnet und die Wasserabnehmer erhalten vierteljährlich einen Zahlschein, mittels dem sie eine Teilzahlung für den Wasserverbrauch leisten. Dieser Teilbetrag wird vom Wasserwerk vorgeschrieben und errechnet sich aufgrund des letzten Jahresverbrauchs. Eine Kontrolle der Zahlungen soll über EDV möglich sein.
+* Bei den Abrechnungen ist zu berücksichtigen, dass die Abnehmer auch mehrere Zähler installiert haben können.
+
+===== Aufgabenstellung
+
+* Erstellen Sie ein Klassendiagramm, um obigen Sachverhalt abzuilden.
+* Verwenden Sie hierzu plantUML.
+* Das Datenmodell soll der 3. Normalform entsprechen (vgl. ERD).
+* Erstellen Sie ein .puml-File sowie ein pdf-File.
+
+
+
+
 
 
 
