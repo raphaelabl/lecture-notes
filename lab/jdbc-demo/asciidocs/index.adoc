@@ -1,0 +1,23 @@
+= Finoview
+Florian Keintzel, Jakob Rathberger, Markus Remplbauer
+1.0.0, 2020-12-12: SYP-Project
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// print the toc here (not at the default position)
+//toc::[]
+
+== Project Proposal
+<<project-proposal.adoc#, Project Proposal>>
+
+== Project Order
+<<project-order.adoc#, Project Order>>
+
+== Functional Specification Document
+<<sysspec.adoc#, System specification>>

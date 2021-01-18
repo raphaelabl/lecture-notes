@@ -1,0 +1,101 @@
+= System Specification
+Florian Keintzel, Jakob Rathberger, Markus Remplbauer
+1.1.0, 2021-01-16: SYP-Project
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+== Description of the Initial Situation
+Currently, finances are mainly viewed via the web interfaces of the respective banks, which often do not record all accounts and payments, only store the data for a limited timespan, and have a limited availability of categories.
+
+== Current State
+Currently, data is stored for a limited amount of time.
+There's also a lack of categories in modern e-banking systems, that prevents the user from properly viewing their finances.
+Furthermore, spatial or temporal delimitation can't be performed.
+
+Finoview is set to solve these issues by importing the bookings, adding categories as well as the ability to perform spatial or temporal delimitation.
+
+== Class Diagram
+[plantuml, align=left]
+----
+include::plantuml/cld.puml[]
+----
+
+
+== ERD
+[plantuml, align=left]
+----
+include::plantuml/erd.puml[]
+----
+
+== Problem definition
+It is hard to do spatial or temporal delimitation manually and as e-banking systems don't provide a solution to this problem and also limit users in the way of categorizing their bookings, this program aims to solve these issues.
+
+== Task
+Our task is to develop a program that makes it easier to view your
+finances and categorize them as well as doing spatial and temporal delimitations.
+
+=== Functional requirements
+
+* Payments can be inserted
+* Payments can be booked
+* Payments can be delimited by space and time
+
+Non-Functional requirements
+
+//==== Transferability
+//==== Maintainability
+//==== Efficiency
+//==== Functionality
+==== Reliability
+The calculations are accurate
+
+==== Usability
+The program is user-friendly and easy to understand
+
+=== Use-Case Diagram
+
+[plantuml,cld01,png]
+----
+@startuml
+skinparam actorStyle awesome
+left to right direction
+Actor User
+package finoview {
+    usecase "insert payments" as ins
+    usecase "perform bookings" as book
+    usecase "view finances" as view
+}
+
+User --> ins
+User --> book
+User --> view
+
+@enduml
+----
+
+
+== Objective
+The objective is to know at what time and for what cause money was spent or received.
+
+== Quantity structure
+The program needs to store the data that is inserted by the user as
+well as the calculated bookings.
+
+== Gantt
+
+image:gantt.png[]
+
+
+////
+[plantuml, align=left]
+----
+include::plantuml/gantt.puml[]
+////
+
+----

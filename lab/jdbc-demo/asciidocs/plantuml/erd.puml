@@ -1,0 +1,39 @@
+@startuml
+
+entity Booking {
+     amount
+     bookingdate
+}
+
+entity Account {
+     iban
+     holder
+     swift
+     accontnumber
+     bankcode
+}
+
+entity Payment {
+     bookingdate
+     amount
+     currency
+     bookinginfo
+     isBooked
+}
+
+entity Category {
+     name
+     abbr
+}
+note right: zB wohnen, Urlaub, Sparform, Geschenke, ...
+
+entity Bookingcategory {
+
+}
+
+Payment }o-r-|| Account
+Payment  ||--o{ Booking
+
+Booking  ||--o{  Bookingcategory
+Category  ||-l-o{  Bookingcategory
+@enduml

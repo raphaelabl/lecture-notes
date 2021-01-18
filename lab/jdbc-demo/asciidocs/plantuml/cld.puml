@@ -1,0 +1,43 @@
+@startuml
+
+class Booking {
+    - amount: BigDecimal
+    - bookingdate: LocalDate
+    - payment: Payment
+}
+
+class Account {
+    - iban: String
+    - holder: String
+    - swift: String
+    - accontnumber: String
+    - bankcode: int
+}
+
+class Payment {
+    - paymentdate: LocalDate
+    - account: Account
+    - amount: BigDecimal
+    - currency: Currency
+    - bookinginfo: String
+    - isBooked: boolean
+}
+
+class Category{
+    - abbr: String
+    - name: String
+}
+
+class Bookingcategory {
+    - booking: Booking
+    - category: Category
+}
+
+Payment "*" -r- "1" Account
+Payment "1" -- "*" Booking
+
+Booking "*" -r- "*" Category
+note right: e.g. living, holiday, saving forms, gifts, ...
+
+(Booking,Category) .. Bookingcategory
+@enduml

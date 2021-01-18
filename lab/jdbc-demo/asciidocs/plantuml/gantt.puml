@@ -1,0 +1,16 @@
+@startgantt
+printscale weekly
+Project starts 2021-01-01
+
+[setup of database] lasts 4 weeks
+
+[setup of JDBC database controller] lasts 2 weeks
+[implementation of basic app-functionality] lasts 10 weeks
+[manual data-insertion] lasts 1 week
+[metrics] lasts 2 weeks
+
+[setup of database]->[setup of JDBC database controller]
+[setup of JDBC database controller]->[implementation of basic app-functionality]
+[implementation of basic app-functionality]->[manual data-insertion]
+[manual data-insertion]->[metrics]
+@endgantt

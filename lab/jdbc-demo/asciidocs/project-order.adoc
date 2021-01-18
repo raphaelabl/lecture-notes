@@ -1,0 +1,100 @@
+= Project order
+Florian Keintzel, Jakob Rathberger, Markus Remplbauer
+1.0.0, 2020-12-12: SYP-Project
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+== Project Name
+pass:[<pre font-family="Courier">
+███████╗██╗███╗   ██╗ ██████╗ ██╗   ██╗██╗███████╗██╗    ██╗
+██╔════╝██║████╗  ██║██╔═══██╗██║   ██║██║██╔════╝██║    ██║
+█████╗  ██║██╔██╗ ██║██║   ██║██║   ██║██║█████╗  ██║ █╗ ██║
+██╔══╝  ██║██║╚██╗██║██║   ██║╚██╗ ██╔╝██║██╔══╝  ██║███╗██║
+██║     ██║██║ ╚████║╚██████╔╝ ╚████╔╝ ██║███████╗╚███╔███╔╝
+╚═╝     ╚═╝╚═╝  ╚═══╝ ╚═════╝   ╚═══╝  ╚═╝╚══════╝ ╚══╝╚══╝
+</pre>]
+a sleek finance overview
+
+== Project Client
+htl-leonding (https://github.com/htl-leonding[])
+
+== Project Background
+Nowadays finances are getting more and more confusing and people lose overview on their earnings and expenses. There are already a lot of tools that help make things more clear but they often only show parts of your finances and are difficult to manage.
+
+In order to really stay on top of things and get precise information on your finances you may want to use this tool.
+
+== Project Output
+The result of this project is a Java-FX Desktop Application that helps the user manage their finances.
+
+In order to achieve that, it features:
+
+* a clean and user-friendly UI
+* customizable diagrams and statistics
+* import / export options for data
+
+== Project Goal
+The goal of this project is to make people more aware of their spendings, give them an overview on what they spend their money on and potentially save money.
+
+== Project Description
+The user is able to register for finoview using an account.
+Financial data and receipts can be exported.
+Moreover detailed graphs that give additional insights can be viewed and exported.
+Incoming and outgoing payments can be sorted by companies as well as
+user-created categories.
+
+== Project Milestones
+- setup of database [4 weeks]
+* create entity-relation-diagram
+* create docker image for PostgreSQL database (docker-volume)
+* create tables (CR_finoview.sql)
+* insert test data (INS_finview.sql)
+* create integration-tests using assertJ-DB
+- setup of JDBC database controller [2 weeks]
+* create JDBC integration tests
+- implementation of basic app-functionality
+* controllers
+** graph-controller [1 week]
+** insert-controller [1 week]
+** settings-controller [1 week]
+** login-controller [1 week]
+* java-fx
+** default-view [1 week]
+** insert-view [1 week]
+** graph-view [1 week]
+** settings-view [1 week]
+** login-view [1 week]
+- manual data insertion [2 days]
+- metrics [2 week]
+* income/outcome stats based on duration
+** quick access buttons
+** generate a graph
+* income/outcome stats based on categories
+- import / export options for finance-data [2 weeks]
+
+== Project Start
+End of the year 2020
+
+== Project End
+The project has to be finished within the scope of the current school-year.
+
+== Project Resources
+- a team of competent developers
+- an integrated development environment
+- a working container runtime environment
+
+== Project Risks
+- not enough time
+- too complex
+- loss of team-member for different reasons (quit-school, health problems, ...)
+
+== Project Organization
+- Team Lead: Florian Keintzel
+- Team Members:
+* Markus Remplbauer
+* Jakob Rathberger

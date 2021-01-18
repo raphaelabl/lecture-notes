@@ -1,0 +1,78 @@
+= Project-Proposal
+Florian Keintzel
+1.0.0, 2020-11-22: Proposal of syp-project
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// print the toc here (not at the default position)
+//toc::[]
+
+pass:[<pre font-family="Courier">
+███████╗██╗███╗   ██╗ ██████╗ ██╗   ██╗██╗███████╗██╗    ██╗
+██╔════╝██║████╗  ██║██╔═══██╗██║   ██║██║██╔════╝██║    ██║
+█████╗  ██║██╔██╗ ██║██║   ██║██║   ██║██║█████╗  ██║ █╗ ██║
+██╔══╝  ██║██║╚██╗██║██║   ██║╚██╗ ██╔╝██║██╔══╝  ██║███╗██║
+██║     ██║██║ ╚████║╚██████╔╝ ╚████╔╝ ██║███████╗╚███╔███╔╝
+╚═╝     ╚═╝╚═╝  ╚═══╝ ╚═════╝   ╚═══╝  ╚═╝╚══════╝ ╚══╝╚══╝
+</pre>]
+a sleek finance overview
+
+== Executive Summary
+Nowadays finances are getting more and more confusing and people lose overview
+on their earnings and  expenses.
+There are already a lot of tools that help make things more clear but they often
+only show parts of your finances and are difficult to manage.
+
+In order to really stay on top of things and get precise information on your finances
+you may want to use this tool.
+
+== Output (Ergebnis, Leistung)
+The result of this project is a Java-FX Desktop Application that helps the user manage their finances.
+
+In order to achieve that, it features:
+
+* a clean and user-friendly UI
+* customizable diagrams and statistics
+* import- / export options for data
+
+== Outcome (Ziele, Leistungswirkung)
+The goal of  this project is to make people more aware of
+their spending, give them an overview on
+what they spend their money on and potentially save money.
+
+== Benefit
+The benefits of this project are:
+
+* lots of different technologies involved
+* versatile application fields
+* can run locally without interference of any server -> data safety
+
+== Resources
+The resources needed for this project are:
+
+* a competent team of developers
+* a working database for storing financial-/userdata (local, maybe server-based in the future)
+* a java-ide (already provided by school-contract with jetbrains)
+
+== Time Table
+The project is supposed to be done within the scope of the syp-class
+and has to be finished before the end of the school-year.
+
+Milestones for this project are:
+
+1. working java base-application
+2. working local database for storing finance-data
+3. feature to add incoming and outgoing amounts (as well as regular income)
+4. simple, sleek and functional design
+5. statistics and diagrams on expenses/income
+6. import / export options for data from other applications
+. CSV import/export
+. import from receipts (using QR-scan)
