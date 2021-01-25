@@ -772,7 +772,7 @@ plantuml::plantuml/cld-bibliothek.puml[]
 === Übungen
 
 * Termin 7. Jänner 2021
-* Abgabe: https://classroom.github.com/a/g3a1-sSK
+* Abgabe: https://edufs.edu.htl-leonding.ac.at/moodle/course/view.php?id=2924#
 
 ==== Sparverein
 
@@ -786,10 +786,10 @@ plantuml::plantuml/cld-bibliothek.puml[]
 
 ===== Aufgabenstellung
 
-* Erstellen Sie ein Klassendiagramm, um obigen Sachverhalt abzuilden.
+* Erstellen Sie ein Klassendiagramm, um obigen Sachverhalt abzubilden.
 * Verwenden Sie hierzu plantUML.
 * Das Datenmodell soll der 3. Normalform entsprechen (vgl. ERD).
-* Erstellen Sie ein .puml-File sowie ein pdf-File.
+* Erstellen Sie ein .puml-File sowie ein pdf-File. (<nachname>_sparverein.puml,<nachname>_sparverein.pdf)
 
 
 
@@ -806,17 +806,17 @@ Zum Aufenthalt sind weiters die getätigten Ausgaben mit Bezeichnung, Datum und 
 
 ===== Aufgabenstellung
 
-* Erstellen Sie ein Klassendiagramm, um obigen Sachverhalt abzuilden.
+* Erstellen Sie ein Klassendiagramm, um obigen Sachverhalt abzubilden.
 * Verwenden Sie hierzu plantUML.
 * Das Datenmodell soll der 3. Normalform entsprechen (vgl. ERD).
-* Erstellen Sie ein .puml-File sowie ein pdf-File.
+* Erstellen Sie ein .puml-File sowie ein pdf-File. (<nachname>_motel.puml,<nachname>_motel.pdf)
 
 
 ==== Wasserwerk Kugelmugel
 
-===== Ausgangssituation - Wasserwerk der Stadt Kugelmugel
+===== Ausgangssituation
 
-Die Stadtverwaltung von Kugelmugel hat sich entschlossen, das Abrechnungssystem für den Wasserverbrauch der Abnehmer grundlegend zu reorganisieren.
+Die Stadtverwaltung von Kugelmugel hat sich entschlossen, das Abrechnungssystem für den Wasserverbrauch der Abnehmer (Kunden) grundlegend zu reorganisieren.
 Es soll zu diesem Zweck ein neues EDV-System entwickelt werden.
 Bisher wurden die Zählerstände der einzelnen Abnehmer von den Wasserkassierern der Stadt vierteljährlich abgelesen und gleichzeitig wurden bei diesen
 Besuchen die Abrechnungen des vorhergehenden Quartals vorgelegt und die entsprechenden Rechnungsbeiträge eingehoben.
@@ -829,13 +829,83 @@ Mit Hilfe des EDV-Systems und der entsprechenden Datenbankapplikation soll nun f
 
 ===== Aufgabenstellung
 
-* Erstellen Sie ein Klassendiagramm, um obigen Sachverhalt abzuilden.
+* Erstellen Sie ein Klassendiagramm, um obigen Sachverhalt abzubilden.
 * Verwenden Sie hierzu plantUML.
 * Das Datenmodell soll der 3. Normalform entsprechen (vgl. ERD).
-* Erstellen Sie ein .puml-File sowie ein pdf-File.
+* Erstellen Sie ein .puml-File sowie ein pdf-File. (<nachname>_kugelmugel.puml, <nachname>_kugelmugel.pdf)
 
 
+== Lecture 2020-01-11
 
+=== Aufgabe: Erstellen eines Pflichtenheftes für jedes Projekt
+
+* Einchecken ins Git-Repo
+
+* Anlegen von Github-Repos
+** keine Leerzeichen im Pfad (zB "Program Files")
+** keine deutschen Sonderzeichen
+** Reponamen immer Kleinschreibung mit Hyphen (kebab-case)
+
+
+== Lecture 2020-01-18 - JDBC
+
+* Wir verwenden zusätzlich zu JDBC eine Bibliothek namens myBatis, um SQL-Skripts ausführen zu können.
+
+* Warum verwenden wir hierzu nicht JDBC?
+** JDBC dient eher dazu einzelne SQL-Statements an die Datenbank zu schicken
+   und dann das Ergebnis im Java-Programm zu verarbeiten
+
+
+|===
+|Gruppe |Bezeichnung |Zweck |Statements
+
+|DML
+|Data Manipulation Language
+|Erstellen/Ändern/Löschen von Daten
+|INSERT/UPDATE/DELETE
+
+|DDL
+|Data Definition Language
+|Erstellen/Ändern/Löschen von Datenstrukturen zB Tabelle,View,...
+|CREATE/ALTER/DROP
+
+|DQL
+|Data Query Language
+|Erstellen von Abfragen
+|SELECT
+
+|TCL
+|Transaction Control Language
+|Durchführen von Transaktionen (unteilbare Folge von Statements)
+|COMMIT/ROLLBACK/SET SAVEPOINT
+
+|DCL
+|Data Control Language
+|Erstellen von Berechtigungen
+|GRANT/REVOKE
+|===
+
+
+http://tutorials.jenkov.com/jdbc/index.html
+
+image:properties.png[]
+
+* Stammdaten
+* Bewegungsdaten, sind periodenbezogen, gelten meist für ein Geschäftsjahr
+* (Lookup-Tables) als Ersatz für Enumerationen
+
+=== JDBC
+
+* Connection
+** Verbindung zur Datenbank
+* Statement
+** konkrete SQL-Statement
+** Statement vs prepared Statement
+
+
+=== assertJ-db
+
+labs/jdbc-demo
 
 
 
