@@ -907,6 +907,64 @@ image:properties.png[]
 
 labs/jdbc-demo
 
+== 2021-01-25
+
+[plantuml,eventmgr]
+----
+left to right direction
+
+@startuml
+class Project {}
+
+Project <-- Task
+Person -- Project
+(Person, Project) .. Team
+Person -- Task
+(Person, Task) .. Working
+
+@enduml
+----
+
+
+== 2021-02-01 - Scrum
+
+=== Präsentation Scrum
+
+* Präsentation Scrum wurde besprochen
+
+* Stakeholder ... Betroffene
+* priorisieren ... nach Wichtigkeit ordnen
+* Domain (Domäne)  ... Fachbereich
+* Domain Object Model (DOM)
+** nicht-technische Klassen, die den Bereich (die Domäne) des Kunden betreffen, zB
+*** Kunde
+*** Produkt
+*** Rechnung
+*** Rechnungsposition
+** kann man vielleicht als objektorientiertes ERD bezeichnen
+** nicht zu verwechseln mit Document Object Model (HTML)
+* Repository ... Sammlung von Dingen, Artefakten, ...
+
+=== Verwenden von github-projects
+
+* Erstellen eines gh-Projects
+* Erstellen von Meilensteinen
+* Zuordnen von Issues
+
+=== Übung: Erstellen er User Stories und der ersten Tasks
+
+Termin: bis nach den Ferien
+
+* Erstellen eines Labels "user-story"
+* Erstellen von mehreren Issues mit Label "user-story" entsprechend dem Foliensatz
+* Für (jede) user-story werden mehrere Tasks erstellt und
+** dem Projekt
+** und dem Teammitglied zugeordnet
+** Anmerkung: die zeitlich näheren US werden bezüglich Tasks detaillierter spezifiziert
+
+
+
+
 
 
 
