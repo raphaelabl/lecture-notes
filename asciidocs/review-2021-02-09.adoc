@@ -1,0 +1,423 @@
+= Assignment 02 Grading
+Thomas Stütz
+1.0.0, 2020-12-21: 04-bibliothek Class Diagram
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+//icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc]
+//icon:github-square[link=https://github.com/htl-leonding-college/asciidoctor-docker-template]
+//icon:home[link=https://htl-leonding.github.io/]
+endif::backend-html5[]
+
+// print the toc here (not at the default position)
+//toc::[]
+
+
+
+Download am 2021-02-09
+
+
+
+== End-to-End-Event-Management
+
+//=== Team
+//* Abazović Edina
+//* Bogdan Sebastijan (FunnySkillz)
+//* Bounab Sofiane (PL)
+//* Grbic Antonio
+
+=== gh-pages
+
+* Nur der Projetauftrag ist enthalten
+* Pflichtenheft fehlt (ist nur im Repo enthalten)
+
+
+=== issues und git-projects
+
+* keine issues vorhanden
+
+
+=== commits
+
+* nur Hr. Bogdan (FunnySkillz) comitted etwas
+
+
+
+=== Programmierung
+
+* nur SQL - Files vorhanden
+** Warum sind die sql-Files in einem docker-Verzeichnis?
+* es fehlt jegliche Infrastruktur zum Starten der Datenbank und Ausführen der SQL-Files
+** wurden von mir hinzugefügt (bat und sh)
+* Ausführen der sql-Statements nicht möglich
+** die Statements sind zu testen oder zumindest auszuprobieren
+** Syntax fehlerhaft
+** Datentypen fehlerhaft
+* es fehlt ein JAva-maven-Projekt
+** mit den Klassen
+** mit den vorgegebenen Database-Klassen
+
+
+
+
+
+
+
+
+== finoview
+
+
+//=== Team
+//
+//* Remplbauer Markus
+//* Rathberger Jakob
+//* Keintzel Florian (PL)
+
+* Die collaborateure des github-repos sollten nicht als externe contributors teilnehmen sonder sollen beim team dabei sein -> siehe Projekt Rankcar
+
+
+=== Docs
+
+* gh-pages: ok
+
+* Dokument übersichtlich dargestellt
+
+* SysSpec  IEEE 830
+** Funktionale Anforderungen -> Functional Requirements (Task ist definitiv falsch)
+** https://slideplayer.com/slide/9335400/[System Requirements Specification, window="_blank"]
+*** Specification vs requirement
+**** Requirement – understanding between customer and supplier
+**** Specification – what the software must do
+**** Requirements that are not in the SRS
+***** Costs
+***** Delivery
+***** dates
+***** Acceptance procedures
+***** etc
+*** The sysspec must correctly define all of the software requirements but no more
+*** The sysspec should not describe design, verification or project management details except for required design constraints
+
+[quote, 'https://www.mountaingoatsoftware.com/articles/advantages-of-user-stories-for-requirements[Advantages of User Stories for Requirements]']
+____
+*User stories* encourage the team to defer collecting details.
+An initial place-holding goal-level story ("A Recruiter can post a new job opening") can be written and then replaced with more detailed stories once it becomes important to have the details.
+
+This technique makes user stories perfect for time-constrained projects.
+A team can very quickly write a few dozen stories to give them an overall feel for the system. T
+hey can then plunge into the details on a few of the stories and can be coding much sooner than a team that feels compelled to complete an IEEE 830–style software requirements specification
+____
+
+IMPORTANT: In einem asciidoctor-file soll jeder Satz in einer neuen Zeile beginnen.
+Diese Zeilen werden trotzdem als *ein* Absatz gerendert.
+
+
+
+
+=== issues und git-projects
+
+* gh-projects: fehlen
+* issues: fehlen
+
+[IMPORTANT]
+====
+* Es sind gh-projects zu erstellen
+** Es ist das Template "Automated kanban with reviews" zu verwenden
+* Die User Stories sind in den issues einzutragen ...
+** ... und mit einem Label "User Story" zu versehen
+** Diese User Stories werden im gh-project nicht angezeigt
+* Eine User Story besteht aus mehreren Tasks
+** Jede dieser Task ist wieder ein eigenes Issue
+** Diese Task-Issues werden in das gh-project eingetragen.
+** Ein Task-Issue wird im Normalfall nur einer Person zugeordnet
+** *Jede* Arbeit hat am Ende ein Commit, zB
+*** Programmcode
+*** wird etwas analysiert, dann commited man das schriftliche Ergebnis dieser Analyse
+*** nach einem Gespräch/Review wird das Protokoll eingecheckt
+** die Benotung erfolgt u.a. nach den durchgeführten Commits
+* Jedes Teammitglied ist Collaborator im gh-repo
+* Jedes Teamitglied führt eigene Commits durch (im Projekt finoview fehlt zB Hr. Keintzel)
+* Jeder Commit wird einem issue (welches auch in dem gh-project) ersichtlich ist, zugeordnet
+** Die Zuordnung erfolgt in der Commit Message mit #<issue-nummer> zB #7
+** *Pull Request* sind erlaubt und auch erwünscht
+* Es wird gebeten, dass Fotos bei den icons verwendet werden - danke
+====
+
+IMPORTANT: Es dürfen keine Passwörter und sonstige Zugangsdaten in ein gh-Repo eingecheckt werden
+
+=== commits
+
+siehe obige Anmerkungen
+
+=== Programmierung
+
+* Die Schnittstellen (insbesonders zu den Banking Systemen) sind zu definieren !!!
+
+* Es wurden bereits ein paar Unit-Tests durchgeführt -> ok
+* Im nächsten Schritt sind Testfälle entsprechend der Use-Cases durchzuführen
+** Das Ziel dieser Tests ist es sicherzustellen, dass das Datenmodell korrekt ist.
+** zB 3 Datensätze aus einer ELBA-Datei einlesen
+bzw. INSERTs anhand der ELBA-Datenstruktur erstellen
+** Diese Auszahlungen / Einnahmen werden zeitlich und sachlich abgegrenzt, dh entsprechende Buchungen erstellt
+** Ein einfacher Report wird erstellt (nur Ausgabe von Zahlen)
+* Es sind Klassendiagramm und ERD aus den tatsächlichen Klassen und Tabellen zu erstellen (reverse-engineering)
+
+* Nach der Erstellung dieser Tests können bereits die ersten Repositories programmiert werden
+
+
+
+
+
+== Hotel Room Booking System
+
+//=== Team
+//
+//* Ablinger Raphael (PL)
+//* Neudorfer Niklas
+//* Sugic Oliver
+//* Kerschbaum Philipp
+
+
+=== Docs
+
+IMPORTANT: In der README.md ist eine kurze Beschreibung des Projekts einzufügen inkl. Links auf die gh-pages
+
+* gh-pages:
+
+=== issues und git-projects
+
+=== commits
+
+* Es wurde das db-Verezichnis committed inkl. den Binärdateien der Derby-DB !?!?!?
+
+IMPORTANT: Das Datenbank-Verzeichnis, generierte Dateien, Zugangsdaten (zB Passwörter)
+und auch fertige PRogramme dürfen *nicht* in das git-repo gepusht werden.
+
+
+
+=== Programmierung
+
+* anstelle des Tabellennamens CONSUME ist CONSUMPTION zu verwenden
+* Es fehlen sämtliche Uni-Tests !!!
+
+* Die Tabellen sind falsch
+
+.ERD reverse-engineered
+image:review-feber-hotel-erd.png[]
+
+. Assoziation entsprechen nicht dem geplanten Modell
+. Warum ist auch in Buchung FIRSTNAME und LASTNAME
+. Die Spaltenbezeichnungen sind durch Underscore zu trennen zb
+.. FIRSTNAME -> FIRST_NAME
+.. CONSUMEID -> CONSUME_ID (eigentlich CONSUMPTION_ID)
+.. DATEOFBIRTH -> DOB
+. Was ist ein BEDAMOUNT? -> NO_OF_BEDS
+
+IMPORTANT: Zwischenergebnisse (hier das ERD) sind zu überprüfen!!!
+
+
+* Es fehlen sämtliche Unit-Tests
+
+* Es gibt noch kein Entity-Model, nur die Klasse `Product`
+
+
+
+
+
+
+
+
+== RankCar
+
+
+
+//=== Team
+//
+//* Pavelescu Darius-Cristian (PL)
+//* Handel Christoph
+//* Aichinger Niklas
+//* Bajim Nadia
+//* Tunc Johannes
+
+
+=== Docs
+
+* gh-pages: Sind sehr sauber strukturiert (Pflichtenheft, Entwurf, Projekthandbuch)
+* Datenbankstruktur nicht -sruktur bei https://2021-3ahif-syp.github.io/02-project-rankcar/pflichtenheft.html#_datenbanksruktur
+
+=== issues und git-projects
+
+.ein guter Anfang - Bravo
+image:review-feber-rankcar-project.png[]
+
+=== commits
+
+* Wie kann es sein, dass Hrn. Handel der Issue zugewiesen wurde, dieser jedoch noch nie committed hat?
+** -> nicht nur der Teamleiter, auch die anderen Teammitglieder dürfen und sollen committen
+
+
+=== Programmierung
+
+CAUTION: Ihr habt die sh-Scripts entfernt und nur mehr bat. Wie soll ich das ausprobieren?
+
+* Dadurch kann ich dem Team leider kein sgt(1) geben
+
+* Die Endung eines sql-files ist .sql -> das ist wichtig, damit die IDE die Syntax checken kann
+* In einem .sql-File wird nicht pascal-case verwendet sondern snake-case
+* es fehlen die Autowerte
+* usw. usw.
+
+
+
+
+
+
+== Restaurant Management System
+
+
+
+//=== Team
+//
+//* Hartl Anna
+//* König Julia (PL)
+//* Hautzmayer Sheila
+//* Melcher Tamara
+
+
+=== Docs
+
+* gh-pages:
+
+* SysSpec
+** Überschrift 5.3 ist wohl sinnlos
+** Euer Pflichtenheft ist nicht besonders aussagekräftig.
+Die Funktionalitäten müssen noch genauer spezifiziert werden, aber das könnt ihr auch in den issues.
+
+.schaut genau wie das geplante CLD aus- Bravo
+image:review-feber-restaurant-cld.png[]
+
+* bei der Vergabe der Spaltenbezeichnung "table" Wäre ich vorsichtig
+
+=== issues und git-projects
+
+* sehr sauber - bravo
+
+=== commits
+
+* Die Teamleiterin ist etwas dominant, jedoch committen auch die anderen (zumindest minimal)
+
+=== Programmierung
+
+* nicht camelCase sonder snake_case bei den sql-Bezeichnern verwenden
+* Autowerte bei den PKs verwenden (wenn sinnvoll)
+
+* Unit-Tests fehlen
+* Repositories sind schon vorbereitet
+** Es ist die Frage, ob es sinnvoll ist auch ein OccupationRepository zu erstellen, oder diese Funktionalität in der Reservation hinzuzufügen
+
+
+
+
+
+
+
+== Watering Reminder
+
+
+
+//=== Team
+
+//* Pelzeder Joachim (PL)
+//* Baumgartner Lukas
+//* Soltysiak Dominik
+
+
+=== Docs
+
+* gh-repo
+** README.md ergänzen
+** Im *About* (rechts oben) den Link zu den gh-pages eintragen!
+
+
+* gh-pages: Es gibt noch keine gh-pages !!!
+
+* Pflichtenheft: ungenügend !!!
+
+CAUTION: Eure Dokumente sind über das ganze Repo verstreut.
+Es ist nicht möglich sich ein Bild über das Projekt zu machen
+
+=== issues und git-projects
+
+=== commits
+
+=== Programmierung
+
+* Das Projekt heißt immer noch jdbc-demo ?!
+* Ihr habt die .sh-Files gelöscht. Wie soll ich nun Euren Code ausprobieren?
+** -> .sh-Files wieder einpflegen
+
+CAUTION: Es ist nicht möglich die sql-Files zu testen, da die entsprechen Skripte nicht verfügbar sind.
+
+* sql-files
+** Es ist nicht üblich in sql-files mit camel case zu arbeiten, anstelle dessen ist snake-case zu verwenden, da in der DB sämtliche Zeichen upper-case gespeichert werden.
+*** -> die sql-files sind entsprechend zu ändern.
+** Auf den ersten Blick vermisse ich bei den nummerischen primary keys die Autowerte
+*** es ist wahrscheinlich problematisch, bei den Pflanzen den gesamten Pflanzennamen als PK zu verwenden
+
+* Class Diagram
+** Die Sinnhaftigkeit der Assoziation "likes" erschließt sich mir nicht.
+Sie ist redundant.
+** Was bedeutet die Spalte USER_TIME, DIFFICULTY
+** Leider fehlt jegliche Erklärung zum Klassendiagramm
+
+* usw, usw, ...
+
+
+
+
+
+
+
+== Work Monitor
+
+
+//=== Team
+//
+//* Hirsch Nico
+//* Tea Vivian
+//* Tran Michael (PL)
+
+
+
+=== Docs
+
+* gh-pages:
+
+* UCD: Pfeile bei den Assoziationen entfernen
+* SysSpec: Da müssen wir drüber reden
+
+=== issues und git-projects
+
+=== commits
+
+* nur ein Teammitglied committed
+
+=== Programmierung
+
+* Die sql-Files schauen sauber aus
+** Es gilt auch für Euch -> die Kommentare in den anderen PRojekten zb snake-case
+
+* Leider habt Ihr die .sh-Files gelöscht und daher kann ich nichts testen
+
+* 3 Teammitglieder haben es nicht geschafft, dem Team beizutreten
+
+
+
+
